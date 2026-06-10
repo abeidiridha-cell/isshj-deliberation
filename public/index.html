@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Délibération des examens</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Délibération des examens</h1>
+    <p>Gestion simple des décisions et notes pour les examens.</p>
+  </header>
+  <main>
+    <section class="form-section">
+      <h2>Ajouter une délibération</h2>
+      <form id="exam-form">
+        <label>
+          Étudiant
+          <input type="text" id="student" required />
+        </label>
+        <label>
+          Matière
+          <input type="text" id="course" required />
+        </label>
+        <label>
+          Date
+          <input type="date" id="date" required />
+        </label>
+        <label>
+          Note
+          <input type="number" id="grade" min="0" max="20" step="0.1" required />
+        </label>
+        <label>
+          Décision
+          <select id="decision" required>
+            <option value="">Choisir</option>
+            <option value="Admis">Admis</option>
+            <option value="Ajourné">Ajourné</option>
+            <option value="Rattrapage">Rattrapage</option>
+          </select>
+        </label>
+        <button type="submit">Enregistrer</button>
+      </form>
+    </section>
+    <section class="list-section">
+      <h2>Liste des délibérations</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Étudiant</th>
+            <th>Matière</th>
+            <th>Date</th>
+            <th>Note</th>
+            <th>Décision</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="exam-list"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

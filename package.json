@@ -1,0 +1,12 @@
+{
+  "name": "isshj-deliberation",
+  "version": "1.0.0",
+  "description": "Application web pour la délibération des examens dans un institut universitaire.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.4"
+  }
+}
